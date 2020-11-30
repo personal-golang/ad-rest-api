@@ -36,3 +36,9 @@ func CreateGroup(groupName string) error {
 
 	return err
 }
+
+func DeleteGroup(groupName string) error {
+	delReq := ldap.NewDelRequest(fmt.Sprintf("cn=%s,ou=roles,dc=wimpi,dc=net", groupName), []ldap.Control{})
+	err := ldapConn.Del(delReq)
+	return err
+}

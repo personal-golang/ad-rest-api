@@ -10,5 +10,15 @@ In a terminal window:
 1. `make start-ad`
 
 In a new terminal window: 
-2. `go mod vendor`
-3. `gow -c run cmd/rest-server/main.go`
+
+1. `make start`
+
+## Running tests
+
+In a terminal window: 
+1. `make start-ad`
+
+In a new terminal window: 
+
+1. `make test`
+2. `make test-cover` to run unit test coverage
